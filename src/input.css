@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+          transform: scale(2deg);
+        }
+        100% {
+            transform: rotate(360deg);
+            transform: scale(1deg);
+        }
+      }
+      
+      .animate-spin-slow {
+        animation: spin 0.6s linear 1;
+      }
+    @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+          
+        }
+        100% {
+            transform: rotate(360deg);
+           
+        }
+      }
+      
+      .rotation {
+        animation: spin 2s linear infinite;
+      }
+      @keyframes top-bottom {
+        0% {
+            transform: translateY(-15px);
+        }
+        50% {
+            transform: translateY(1px);
+        }
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+    
+    .top-bottom {
+        animation: top-bottom 2s linear infinite;
+        transform-origin: center;
+    }
+    
+    
+     .slide {
+      transition: transform 0.5s ease; 
+    }
+    
+}
